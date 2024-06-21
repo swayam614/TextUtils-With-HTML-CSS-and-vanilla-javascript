@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextUtils-Home</title>
+    <link rel="icon" type="image/x-icon" href="apple-icon-180x180.png">
+    <link rel="stylesheet" href="extra.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .firstSection{
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: space-around;
+            margin: 23px 0px;
+        }
+        .leftSection{
+            /* background-color: red; */
+            flex: 2;
+            margin-right:20px ;
+        }
+        .leftSection2{
+            /* background-color: red; */
+            flex: 2;
+        }
+        .rightSection{
+            /* background-color: green; */
+            flex: 2;
+        }
+        #previewTextarea {
+            border: 2px solid rgb(18, 18, 62);
+            padding: 10px;
+            min-height: 455px;
+        }
+        .rightSection2{
+            /* background-color: green; */
+            flex: 2;
+        }
+        .secondSection{
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: space-around;
+            margin: 23px 0px;
+        }
+        .hii{
+            flex: 2;
+        }
+        .hello{
+            flex: 2;
+        }
+        .swayam{
+            margin-right: 31px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">TextUtils</div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/feedback.html">FeedBack</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       
+
+        <section class ="firstSection">
+            <div class="leftSection">
+                <h1 id="textheading">Enter your text to analyze below</h1>
+                <div id="textarea">
+                    <textarea class="form-control" id="myBox" rows="10" cols="50" style="height: 455px;"></textarea>
+                </div>
+            </div>
+            <div class="rightSection">
+                <!-- <div id="previewContainer"> -->
+                    <h2>Preview:</h2><br>
+                    <div class="hii">
+                        <div id="previewTextarea"  class="textarea-preview"></div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+        <section class="secondSection">
+            <div class="leftSection2">
+                <div id="buttonContainer">
+            
+                    <button class="btn" id="convertToUpper">Convert to UPPERCASE</button>
+                    <button class="btn" id="convertToLower">Convert to lowercase</button>
+                    <button class="btn" id="clearText">Clear Text</button>
+                    <button class="btn" id="speakText">Speak</button>
+                    <button class="btn" id="copyText">Copy</button>
+                    <button class="btn" id="removeSpaces">Remove Extra Space</button>
+                    <button class="btn" id="formatPython">Format as Python</button><br>
+                    
+                    <button class="btn" id="findAndReplace">Find and replace</button><br>
+                    <label for="fword" class="swayam">Find</label>
+                    <input type="text" name="fword" id="findWord"><br />
+                    <label for="rword">Replace</label>
+                    <input type="text" name="wrod" id="replaceWord">
+                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <div>
+                        <h3>Enter the character or word to search</h3>
+                        <select  id="searchType" class="btn" style="width: 212px;">
+                            <option value="char">Search Character</option>
+                            <option value="word">Search Word</option>
+                            <div id="searchInput">
+                                <input type="text" id="inputText"><br>
+                                
+                            </div>
+                        </select>
+                        
+                        
+                        
+                        <div>
+                            <div id="highlightedText"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thirdSection">
+            <div class='container' style="border: 4px solid rgb(18, 18, 62); margin-left: 35px; margin-right: 35px;" >
+                <h1>Your text summary</h1>
+                <p>Words: <span id="wordCount">0</span>, Characters: <span id="charCount">0</span></p>
+                <p>Read Time: <span id="readTime">0</span> minutes</p>
+        
+                
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="message">Feedback:</label>
+        <textarea id="message" rows="5" required></textarea>
+        <br>
+        <button type="button" id="sendFeedback">Send Feedback</button>
+    </form>
+
+    <script>
+        document.getElementById('sendFeedback').addEventListener('click', function() {
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const subject = 'Feedback';
+
+    // Replace "feedback@example.com" with your desired recipient email address
+    const recipientEmail = 'swayampalrecha6@gmail.com';
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=Email: ${email}%0A%0A${message}`;
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+});
+
+    </script>
+</body>
+</html>
